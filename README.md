@@ -3,7 +3,11 @@
 
 ### Team Girl Scout Cookies
 Natalie Cluck
+
 Constantina Hug
+
 Hirva Shah
+
 Zac Steer
+
 Jody Xiaomeng
