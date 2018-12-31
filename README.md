@@ -1,6 +1,5 @@
 # Exercise Tracking App
-## CSCE 431-550: Software Engineering (Singapore)
-## Wintermester 2018-2019
+## CSCE 431-550: Software Engineering (Singapore), Wintermester 2018-2019
 
 ### Team Girl Scout Cookies
 Natalie Cluck
