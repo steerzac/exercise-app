@@ -53,4 +53,12 @@ class GameController < ApplicationController
     redirect_to game_path unless @game.check_win_or_lose == :lose
   end
 
+  def my_measurements
+    puts("Displaying my measurements page")
+  end
+  
+  def enter_my_measurements
+    puts("Displaying enter my measurements page")
+  end
+
 end

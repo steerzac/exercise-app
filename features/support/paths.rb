@@ -19,6 +19,11 @@ module NavigationHelpers
       '/lose'
     when /the show page/
       '/show'
+    when /the my measurements page/
+      '/my_measurements'
+      
+    when /the enter measurements page/
+      '/enter_my_measurements'
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
