@@ -10,6 +10,8 @@ class GameController < ApplicationController
     @db = Database.new()
     if !session[:game].blank?
       @game = YAML.load(session[:game])
+    end
+    if !session[:db].blank?
       @db = YAML.load(session[:db])
     end
   end
