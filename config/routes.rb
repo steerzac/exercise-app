@@ -1,16 +1,11 @@
 Rails.application.routes.draw do
 
-  get  'new'    => 'game#new',   :as => 'new_game'
-  post 'create' => 'game#create',:as => 'create_game'
-  get  'show'   => 'game#show',  :as => 'game'
-  post 'guess'  => 'game#guess', :as => 'guess'
-  get  'win'    => 'game#win',   :as => 'win_game'
-  get  'lose'   => 'game#lose',  :as => 'lose_game'
-  get  'my_measurements' => 'game#my_measurements', :as => 'my_measurements'
-  get  'enter_my_measurements' => 'game#enter_my_measurements', :as => 'enter_my_measurements'
-  post  'process_enter_new_measurements' => 'game#process_enter_new_measurements', :as => 'process_enter_new_measurements'
+  get  'index'    => 'measurements#index',   :as => 'new_game'
+  get  'my_measurements' => 'measurements#my_measurements', :as => 'my_measurements'
+  get  'enter_my_measurements' => 'measurements#enter_my_measurements', :as => 'enter_my_measurements'
+  post  'process_enter_new_measurements' => 'measurements#process_enter_new_measurements', :as => 'process_enter_new_measurements'
 
-  root 'game#new'
+  root 'measurements#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
