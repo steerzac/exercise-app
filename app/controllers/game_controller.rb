@@ -7,13 +7,16 @@ class GameController < ApplicationController
   
   def get_game_from_session
     @game = HangpersonGame.new('')
+    @db = Database.new()
     if !session[:game].blank?
       @game = YAML.load(session[:game])
+      @db = YAML.load(session[:db])
     end
   end
 
   def store_game_in_session
     session[:game] = @game.to_yaml
+    session[:db] = @db.to_yaml
   end
 
   public
@@ -54,11 +57,20 @@ class GameController < ApplicationController
   end
 
   def my_measurements
+    
     puts("Displaying my measurements page")
   end
   
   def enter_my_measurements
     puts("Displaying enter my measurements page")
   end
-
+  
+  def process_enter_new_measurements
+    weight = params[:weight]
+    body_fat = params[:body_fat]
+    height = params[:height]
+    @db.process_enter_new_measurements(weight, body_fat, height)
+    
+    redirect_to my_measurements_path
+  end 
 end

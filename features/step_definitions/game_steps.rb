@@ -84,3 +84,6 @@ When /^(?:|I )press "([^\"]*)"(?: within "([^\"]*)")?$/ do |button, selector|
   end
 end
 
+When /^I enter "(.*)" into "(.*)"$/ do |value, field|
+    fill_in(field, :with => value)
+end

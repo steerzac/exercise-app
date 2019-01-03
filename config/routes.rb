@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get  'lose'   => 'game#lose',  :as => 'lose_game'
   get  'my_measurements' => 'game#my_measurements', :as => 'my_measurements'
   get  'enter_my_measurements' => 'game#enter_my_measurements', :as => 'enter_my_measurements'
-  
+  post  'process_enter_new_measurements' => 'game#process_enter_new_measurements', :as => 'process_enter_new_measurements'
 
   root 'game#new'
 
