@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   post 'guess'  => 'game#guess', :as => 'guess'
   get  'win'    => 'game#win',   :as => 'win_game'
   get  'lose'   => 'game#lose',  :as => 'lose_game'
+  get  'my_measurements' => 'game#my_measurements', :as => 'my_measurements'
+  get  'enter_my_measurements' => 'game#enter_my_measurements', :as => 'enter_my_measurements'
+  
 
   root 'game#new'
 
