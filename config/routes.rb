@@ -1,11 +1,26 @@
 Rails.application.routes.draw do
 
+  get 'sessions/create'
+
+  get 'sessions/destroy'
+
+  get 'home/show'
+
   get  'index'    => 'measurements#index',   :as => 'new_game'
   get  'my_measurements' => 'measurements#my_measurements', :as => 'my_measurements'
   get  'enter_my_measurements' => 'measurements#enter_my_measurements', :as => 'enter_my_measurements'
   post  'process_enter_new_measurements' => 'measurements#process_enter_new_measurements', :as => 'process_enter_new_measurements'
 
-  root 'measurements#index'
+  # root 'measurements#index'
+  
+  get 'auth/:provider/callback', to: 'sessions#create'
+  get 'auth/failure', to: redirect('/')
+  get 'signout', to: 'sessions#destroy', as: 'signout'
+
+  resources :sessions, only: [:create, :destroy]
+  resource :home, only: [:show]
+
+  root to: "home#show"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
