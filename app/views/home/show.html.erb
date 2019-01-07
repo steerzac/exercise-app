@@ -1,2 +1,13 @@
-<h1>Home#show</h1>
-<p>Find me in app/views/home/show.html.erb</p>
+<div class="container">
+  <div id="header" class="span-24">
+  </div>
+  
+  <%= form_tag my_measurements_path, :method => :get do %>
+  <%= submit_tag 'My Measurements' %>
+  <% end %>
+  
+  <div id="footer" class="span-24">
+    <p>Project by Team Girl Scout Cookies</p>
+  </div>
+</div>
+
