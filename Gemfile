@@ -19,6 +19,9 @@ gem 'coffee-rails', '~> 4.1.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
+gem "omniauth-google-oauth2", "~> 0.2.1"
+
+gem 'pg', '~> 0.20'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -44,5 +47,10 @@ group :test do
   gem 'cucumber-rails', :require => false
   gem 'rspec-rails'
   gem 'webmock'
+  gem 'simplecov', :require => false
+end
+
+group :development, :test do
+  gem 'factory_bot_rails'
 end
 
