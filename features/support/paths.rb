@@ -32,10 +32,10 @@ module NavigationHelpers
       '/my_goals'
       
     when /the my client page/
-      '/my_client'
+      '/my_clients'
       
     when /the my workout page/
-      '/my_workout'
+      '/my_workouts'
       
 
 

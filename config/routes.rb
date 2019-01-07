@@ -1,14 +1,13 @@
 Rails.application.routes.draw do
 
-  get  'index'    => 'homepage#dashboard',   :as => 'nothing'
   get  'my_measurements' => 'measurements#my_measurements', :as => 'my_measurements'
   get  'enter_my_measurements' => 'measurements#enter_my_measurements', :as => 'enter_my_measurements'
   post  'process_enter_new_measurements' => 'measurements#process_enter_new_measurements', :as => 'process_enter_new_measurements'
  
   get  'dashboard' => 'homepage#dashboard', :as => 'dashboard'
-  get 'my_goals' => 'homepage#my_goals', :as => 'my_goals'
-  get 'my_client' => 'homepage#my_client', :as => 'my_client'
-  get 'my_workout' => 'homepage#my_workout', :as => 'my_workout'
+  get 'my_goals' => 'goals#my_goals', :as => 'my_goals'
+  get 'my_clients' => 'clients#my_clients', :as => 'my_clients'
+  get 'my_workouts' => 'workouts#my_workouts', :as => 'my_workouts'
   
   
   
