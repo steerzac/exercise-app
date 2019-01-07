@@ -1,5 +1,18 @@
 Rails.application.routes.draw do
 
+  get 'sessions/create'
+
+  get 'sessions/destroy'
+
+  get 'home/show'
+  
+  get 'auth/:provider/callback', to: 'sessions#create'
+  get 'auth/failure', to: redirect('/')
+  get 'signout', to: 'sessions#destroy', as: 'signout'
+
+  resources :sessions, only: [:create, :destroy]
+  resource :home, only: [:show]
+
   get  'my_measurements' => 'measurements#my_measurements', :as => 'my_measurements'
   get  'enter_my_measurements' => 'measurements#enter_my_measurements', :as => 'enter_my_measurements'
   post  'process_enter_new_measurements' => 'measurements#process_enter_new_measurements', :as => 'process_enter_new_measurements'
@@ -8,8 +21,6 @@ Rails.application.routes.draw do
   get 'my_goals' => 'goals#my_goals', :as => 'my_goals'
   get 'my_clients' => 'clients#my_clients', :as => 'my_clients'
   get 'my_workouts' => 'workouts#my_workouts', :as => 'my_workouts'
-  
-  
   
   
   root 'homepage#dashboard'
