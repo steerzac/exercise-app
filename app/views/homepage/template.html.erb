@@ -5,12 +5,10 @@
       <div class="span-24">
         <%= yield %>
       </div>
-      <%= form_tag my_measurements_path, :method => :get do %>
-      <%= submit_tag 'My Measurements' %>
-      <% end %>
+
       
       <%= form_tag dashboard_path, :method => :get do %>
-      <%= submit_tag 'My Dashboard' %>
+      <%= submit_tag 'Back to Dashboard' %>
       <% end %>
       
       <div id="footer" class="span-24">

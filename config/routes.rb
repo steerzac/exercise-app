@@ -4,7 +4,15 @@ Rails.application.routes.draw do
   get  'my_measurements' => 'measurements#my_measurements', :as => 'my_measurements'
   get  'enter_my_measurements' => 'measurements#enter_my_measurements', :as => 'enter_my_measurements'
   post  'process_enter_new_measurements' => 'measurements#process_enter_new_measurements', :as => 'process_enter_new_measurements'
-
+ 
+  get  'dashboard' => 'homepage#dashboard', :as => 'dashboard'
+  get 'my_goals' => 'homepage#my_goals', :as => 'my_goals'
+  get 'my_client' => 'homepage#my_client', :as => 'my_client'
+  get 'my_workout' => 'homepage#my_workout', :as => 'my_workout'
+  
+  
+  
+  
   root 'measurements#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

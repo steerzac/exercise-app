@@ -1,0 +1,20 @@
+<h2>Dashboard: My Progress</h2>
+<p>
+  Progress so far:
+</p>
+
+<%= form_tag my_goals_path, :method => :get do %>
+  <%= submit_tag 'My Goal' %>
+<% end %>
+
+<%= form_tag my_measurements_path, :method => :get do %>
+  <%= submit_tag 'My Measurements' %>
+<% end %>
+
+<%= form_tag my_client_path, :method => :get do %>
+  <%= submit_tag 'My Client' %>
+<% end %>
+
+<%= form_tag my_workout_path, :method => :get do %>
+  <%= submit_tag 'My Workout' %>
+<% end %>
