@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get  'index'    => 'measurements#index',   :as => 'new_game'
+  get  'index'    => 'homepage#dashboard',   :as => 'nothing'
   get  'my_measurements' => 'measurements#my_measurements', :as => 'my_measurements'
   get  'enter_my_measurements' => 'measurements#enter_my_measurements', :as => 'enter_my_measurements'
   post  'process_enter_new_measurements' => 'measurements#process_enter_new_measurements', :as => 'process_enter_new_measurements'
@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   
   
   
-  root 'measurements#index'
+  root 'homepage#dashboard'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
